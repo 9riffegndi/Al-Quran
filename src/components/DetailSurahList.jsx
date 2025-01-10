@@ -1,6 +1,7 @@
 import React from "react";
 import DetailSurahItem from "./DetailSurahItem";
 
+
 export default function DetailSurahList({ surahs }) {
     return (
       <ul className="flex mt-5 w-full flex-col justify-center ">
