@@ -1,21 +1,16 @@
 // pages/Home.js
 import React from 'react';
-import { useState, useEffect } from 'react';
-
-import Navbar from '../components/Navbar';
 import ListSurah from '../components/SurahList';
-
 import MainLayout from '../Layouts/MainLayouts';
-
-import  useFetchSurahs  from '../hooks/useFetchSurahs';
-
+import useFetchSurahs  from '../hooks/useFetchSurahs';
+import Loading from '../components/Loading';
 
 const Home = () => {
 
     const { surahs, loading, error } = useFetchSurahs();
 
     if (loading) {
-        return <p>Loading...</p>;
+        return <Loading />;
     }
 
     if (error) {
@@ -24,7 +19,6 @@ const Home = () => {
 
     return (
         <>
-        <Navbar />
         <MainLayout>
             <ListSurah surahs={surahs}  />
         </MainLayout>

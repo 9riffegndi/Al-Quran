@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;    
+
+@font-face {
+    font-family: 'LPMQ Isep Misbah';
+    src: url('../fonts/LPMQ IsepMisbah.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Amiri';
+    src: url('../fonts/AmiriQuran-Regular.ttf') format('format');
+}
+
+* {
+    font-family: 'LPMQ Isep Misbah';
+}
+
+
+.Amiri {
+    font-family: 'Amiri';
+}

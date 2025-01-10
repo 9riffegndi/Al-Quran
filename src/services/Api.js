@@ -9,8 +9,10 @@ export const getAllSurah = () => {
 };
 
 //"description": "get spesifict surah using number surah in quran (1 - 114): /surahs/{numberSurah}"
-export const getSpesifictSurahByNumberSurah = (numberSurah) => {
-    return axios.get(`${baseUrl}surahs/${numberSurah}`);
+
+export const getSpesifictSurahByNumberSurah = async (numberSurah) => {
+  const response = await axios.get(`${baseUrl}surahs/${numberSurah}`);
+  return response;
 };
 
 

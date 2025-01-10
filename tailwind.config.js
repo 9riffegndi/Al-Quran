@@ -4,12 +4,17 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'xs': '300px',
+      }
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {
     themes: [
       "light",
+      "abyss",
       "dark",
       "cupcake",
       "bumblebee",
