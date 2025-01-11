@@ -1,8 +1,8 @@
 
 import { Children } from "react"
-export default function MainLayout( {children} ) {
+export default function MainLayout( {children, className=''} ) {
     return  (
-        <div className="w-full justify-center p-2 md:p-10 flex items-start min-h-screen">
+        <div className={`w-full justify-start flex items-start min-h-screen ${className}`}>
             {children}
         </div>
     )
