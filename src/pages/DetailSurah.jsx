@@ -23,15 +23,19 @@ export default function DetailSurah() {
       <nav className="bg-base-300 justify-between  items-center grow   w-full "> 
         <button 
           onClick={toggleSidebar} 
-          className="w-max  cursor-pointer  border-b-2 "
-        >
-          ${surahs.name} {showSidebar ? 'SHOW' : 'HIDE'}
+          className= " w-[150px] flex  justify-center items-center gap-1 border-b-2 "> 
+          {surahs.map((surah) => (
+            <p key={surah.number}>
+              {surah.name} {/* Menampilkan nama surah */}
+            </p>
+          ))}
+          {showSidebar ? <img className="w-5" src="https://img.icons8.com/?size=100&id=39975&format=png&color=FAB005" /> : <img className="w-5" src="https://img.icons8.com/?size=100&id=39970&format=png&color=FAB005" />}
         </button>
       </nav>
       <div className="flex w-full">
-          <aside className={`bg-base-300  w-[300px] min-h-full  
+          <aside className={`bg-base-300 p-4  w-[300px] min-h-full  
             ${showSidebar ? 'block' : 'hidden'}`}>
-            Konten Aside
+            search surah and sort ayah here
           </aside>
         <div className="flex-1">
           <DetailSurahList surahs={surahs} />
